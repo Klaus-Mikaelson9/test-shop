@@ -1,0 +1,90 @@
+.contact {
+    padding: 0 20px;
+
+    &__title {
+        margin: 50px 0;
+        font-size: 35px;
+        color: $text-color;
+    }
+    &__container {
+        display: flex;
+    }
+    &__info {
+        width: 100%;
+        margin-top: 10px;
+
+        &-title {
+            font-size: 25px;
+            color: #333333;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            margin-top: 12px;
+        }
+        &-item {
+            a {
+                font-size: 16px;
+                text-decoration: none;
+                color: $text-color;
+                transition: .6s ease all;
+                @include primaryFont(16px, 150%, 400);
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+        &-mail {
+            margin-top: 25px;
+        }
+        &-address {
+            margin-top: 25px;
+        }
+    }
+    &__form {
+        width: 100%;
+        
+        &-wrp {
+            margin-top: 30px;
+            width: 90%;
+
+            button {
+                background: $text-color;
+                color: $footer-btn;
+                margin-left: 5px;
+                border: none;
+                @include primaryFont(16px, 100%, 600);
+                padding: 12px 24px;
+                color: #ffffff;
+                background-color: $text-color;
+                font-family: 'Roboto',sans-serif;
+                transition: 1s ease all;    
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        &-title {
+            margin-top: 10px;
+            font-size: 30px;
+            font-weight: 600;
+            color: $text-color;
+            @include primaryFont(30px, 16px, 600)
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .contact {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+        &__form {
+            margin-top: 40px;
+        }
+    }
+}

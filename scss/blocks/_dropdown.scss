@@ -1,0 +1,120 @@
+.dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+
+    &.active {
+        .dropdown-btn__svg {
+            transform: rotate(180deg);
+        }
+        .nav {
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        column-gap: 7px;
+        padding: 12px 10px;
+        border: none;
+        user-select: none;
+        background-color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        @include primaryFont(16px, 16px, 400);
+        justify-content: space-between !important;
+        width: 95% !important;
+        
+        &__svg {
+            display: flex;
+            align-items: center;
+            fill: $text-color;
+            padding-top: 1px;
+            transition: .4s;
+        }
+    }
+    .nav {
+        z-index: 20;
+        position: absolute;
+        top: 43px;
+        left: 0;
+        min-width: 100%;
+        background-color: #fff;
+        border-radius: 3px;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+
+        &__active {
+            .nav__list-line {
+                transform: rotate(180deg);
+                z-index: 130;
+            }
+            .drop-menu {
+                opacity: 1;
+                visibility: visible;
+                z-index: 20;
+            }
+        }
+
+        &__list {
+
+            &-line {
+                display: flex;
+                transition: .4s;
+            }
+        }
+
+        &__item {
+            position: relative;
+
+            &:last-child {
+                a {
+                    border-bottom: none;
+                }
+            }
+
+            &-link {
+                display: block;
+                padding: 5px 20px;
+                border-bottom: 1px solid #eee;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+.drop-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 10;
+
+    &__item {
+        text-align: center;
+        padding: 5px 0;
+        cursor: pointer;
+        transition: .4s;
+
+        &:hover {
+            background-color: antiquewhite;
+        }
+    }
+}

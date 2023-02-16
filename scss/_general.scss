@@ -1,0 +1,56 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    @include primaryFont(14px, 16px, 400)
+}
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+}
+.illustration {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: $tabletWidth) {
+    .container {
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: $mobile-width) {
+    .container {
+        width: 95% ;
+        padding: 0 15px;
+    }
+}

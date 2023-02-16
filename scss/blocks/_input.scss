@@ -1,0 +1,39 @@
+.input-group{
+    margin: 10px 0;
+    position:relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    @include primaryFont(14px, 16px, 400);
+
+    label {
+        padding: 0 10px;
+        color: $blog-color;
+        position: absolute;
+        background-color: #fff;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        text-transform: capitalize;
+        pointer-events: none;
+        font-size: 14px;
+        transition: all 0.3s;
+    }
+    input {
+        width: 100% !important;
+        padding: 15px 15px;
+        width: 300px;
+        border: 1px solid $blog-color !important;
+        border: none;
+        outline: none;
+        color: $text-color;
+        font-size: 16px;
+        font-family:inherit;
+        background-color: transparent;
+        border-radius:10px;
+    }
+    & input:focus + label,
+    & input:not(:placeholder-shown) + label {
+    top:0;
+    font-size:16px;
+    }
+}

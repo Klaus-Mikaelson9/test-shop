@@ -1,0 +1,94 @@
+.saidbar {
+    &__cont{
+        display: flex;
+        column-gap: 5px;
+        align-items: center;
+        height: 70px;
+
+        input {
+            background: #fff;
+            border: 1px solid #ccc;
+            width: 30%;
+            padding: 0;
+            height: 32px;
+            font-size: 100%;
+            line-height: 32px;
+            text-align: center;
+            display: inline-block;
+            box-sizing: border-box;
+            color: #666;
+            border-radius: 3px;
+        }
+        button {
+            color: #ffffff;
+            background-color: #333;
+            transition: 0.5s ease-out;
+            float: right;
+            padding: 5px 15px;
+            margin-left: 10px;
+        }
+    }
+    &__wrp {
+        padding: 15px;
+        overflow-y: auto;
+        margin-top: 15px;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #efefef;
+        width: 300px;
+        min-height: 300px;
+        border-bottom: none;
+    }
+    &__menu-item {
+        padding: 5px 0;
+    }
+    &__menu-link {
+        font-size: 16px;
+        color: $text-color;
+        transition: 1s ease all;
+        word-break: break-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin-left: 10px;
+    }
+    &__menu-category {
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+    &__menu-line{
+        float: left;
+        font-size: 23px;
+        padding-right: 10px;
+        padding-left: 5px;
+        transform: rotate(180deg);
+    }
+    &__menu-bg {
+        background-color: #f5f5f5;
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: $text-color;
+    }
+    &__filter {
+        margin-top: 15px;
+
+        &-title {
+            padding: 15px 10px;
+            font-size: 115%;
+            font-weight: 500;
+            border-bottom: 1px solid #ebebeb;
+        }
+        &-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: $tabletWidth) {
+    .saidbar {
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+.navigation {
+    background-color: $brand-border;
+    margin-top: 15px;
+    padding: 5px 15px;
+
+    &__list {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
+    }
+    &__item {
+        font-size: 13px;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        
+        a {
+            font-size: 13px;
+            color: $text-color;
+            transition: .4s ease all;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        span {
+            padding-top: 1.5px;
+        }
+    }
+}

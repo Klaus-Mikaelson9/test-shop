@@ -1,0 +1,103 @@
+.blog {
+    margin-top: 40px;
+    &__upper {
+        margin-bottom: 25px;
+        @include primaryFont(30px, 34px, 600)
+    }
+    &__info {
+        text-align: center;
+        margin-bottom: 25px;
+        @include primaryFont(30px, 34px, 600)
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 20px;
+    }
+    &__item {
+        background: $brand-border;
+        overflow: hidden;
+        transition: 1s ease all;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+    &__img {
+        height: 262px;
+        width: 375px;
+    }
+    &__title {
+        color: $text-color;
+        margin: 20px 0 10px 0;
+        padding: 0 25px;
+        @include primaryFont(18px, 20px, 500)
+    }
+    &__text {
+        max-width: 250px;
+        padding-left: 25px;
+        color: $blog-color;
+        @include primaryFont(13px, 20px, 400)
+    }    
+    &__cont {
+        width: max-content;
+    }
+    &__link {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $text-color;
+        transition: 1s ease all;
+        margin: 20px 0 20px 0;
+        padding: 0 25px;
+        transition: 1s ease all;
+    }
+    &__line {
+        float: right;
+        font-size: 23px;
+        padding-right: 10px;
+        transition: 1s;
+        margin: -3px 0 0 20px;
+        padding-left: 20px;
+
+        &:hover {
+            transform: translateX(12px);
+        }
+    }
+    &__uppercasse {
+        text-transform: none;
+        color: $text-color;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: $tablet-mid-width) {
+    .blog {
+        &__list {
+            display: flex;
+            justify-content: center;
+        }
+        &__img {
+            height: 225px;
+            width: 300px;
+        }
+        &__upper {
+            margin-left: 1%;
+        }
+    }
+}
+@media screen and (max-width: $tabletWidth) {
+    .blog {
+        &__list {
+            display: none;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
